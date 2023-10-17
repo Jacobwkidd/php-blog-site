@@ -5,9 +5,9 @@
 	<meta charset="utf-8">
 	<meta name="description" content="<?php echo($pageDescription); ?>">
     <meta name="viewport" content="width=device-width">
-	<link rel="stylesheet" type="text/css" href="/php-blog-site/styles/reset.css">
-	<link rel="stylesheet" type="text/css" href="/php-blog-site/styles/main.css">
-	<script src="/php-blog-site/js/main.js"></script>
+	<link rel="stylesheet" type="text/css" href="<?=PROJECT_FOLDER?>styles/reset.css">
+	<link rel="stylesheet" type="text/css" href="<?=PROJECT_FOLDER?>styles/main.css">
+	<script src="<?=PROJECT_FOLDER?>js/main.js"></script>
 </head>
 <body>
 	<header>
@@ -17,8 +17,8 @@
 	<div id="menu">
 		<nav>
 			<ul>
-				<li><a href="/php-blog-site/index.php">Home</a></li>
-				<li><a href="/php-blog-site/blog/index.php">Blog</a></li>
+				<li><a href="<?=PROJECT_FOLDER?>index.php">Home</a></li>
+				<li><a href="<?=PROJECT_FOLDER?>blog/index.php">Blog</a></li>
 			</ul>
 		</nav>
 	</div>
