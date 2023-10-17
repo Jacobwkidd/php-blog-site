@@ -1,8 +1,9 @@
 <?php
-include("../includes/config.inc.php");
+
 $pageTitle = "Blog";
 $pageDescription = "A listing of links to blog posts";
 include("../includes/header.inc.php");
+// echo($x);
 ?>
 
 
