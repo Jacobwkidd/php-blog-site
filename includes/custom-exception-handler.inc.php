@@ -30,7 +30,6 @@ function myExceptionHandler($exception) {
 		echo($str);
 		// Note that we aren't sending the SERVER ERROR header, so that you can easily read the error message in the body
 	}else{
-		
 		//send email to web admin
 		mail(SITE_ADMIN_EMAIL, SITE_DOMAIN . " - ERROR", $str);
 		header($_SERVER['SERVER_PROTOCOL'] . ' 500 Internal Server Error', true, 500);
