@@ -5,27 +5,11 @@ $pageDescription = "A listing of links to blog posts";
 include("../includes/header.inc.php");
 // echo($x);
 
-$host = "localhost";
-$db = "php_blog_site";
-$user = "root";
-$password = "test";
 
-$link = mysqli_connect($host, $user, $password, $db);
-// var_dump($link);
 
-$qStr = "SELECT * FROM pages WHERE published IS NOT NULL";
-
-$result = mysqli_query($link, $qStr);
-
-// var_dump($result);
-$allPosts = [];
-while($row = mysqli_fetch_assoc($result)){
-	$post = [];
-	$post["id"] = htmlentities($row['id']);
-	$post["title"] = htmlentities($row['title']);
-	$post["description"] =htmlentities($row['description']);
-	$allPosts[] = $post;
-}
+include("../includes/PageDataAccess.inc.php");
+$da = new PageDataAccess(get_link());
+$allPosts = $da->getAll();
 //var_dump($allPosts);
 
 function createPostList($posts){
